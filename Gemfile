@@ -18,6 +18,7 @@ group :assets do
   # gem 'therubyracer', :platform => :ruby
 
   gem 'uglifier', '>= 1.0.3'
+  gem 'twitter-bootstrap-rails', github: 'seyhunak/twitter-bootstrap-rails'
 end
 
 gem 'jquery-rails'
@@ -35,4 +36,5 @@ gem 'jquery-rails'
 # gem 'capistrano'
 
 # To use debugger
-# gem 'ruby-debug19', :require => 'ruby-debug'
+#
+gem 'simple_form'

@@ -1,4 +1,8 @@
 Portfolio::Application.routes.draw do
+  resources :talks
+
+  root to: 'talks#index'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
