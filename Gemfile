@@ -18,7 +18,7 @@ group :assets do
   # gem 'therubyracer', :platform => :ruby
 
   gem 'uglifier', '>= 1.0.3'
-  gem 'twitter-bootstrap-rails', github: 'seyhunak/twitter-bootstrap-rails'
+  gem 'twitter-bootstrap-rails', git: 'https://github.com/seyhunak/twitter-bootstrap-rails.git'
 end
 
 gem 'jquery-rails'
@@ -38,3 +38,4 @@ gem 'jquery-rails'
 # To use debugger
 #
 gem 'simple_form'
+gem 'httparty'
