@@ -1,6 +1,6 @@
 <%- model_class = @talk.class -%>
 <div class="page-header">
-  <h1><%=t '.title', :default => model_class.model_name.human %></h1>
+  <h1><%= @talk.title %></h1>
 </div>
 
 <dl class="dl-horizontal">
@@ -8,6 +8,12 @@
   <dd><%= @talk.title %></dd>
   <dt><strong><%= model_class.human_attribute_name(:url) %>:</strong></dt>
   <dd><%= @talk.url %></dd>
+</dl>
+
+<dl class="dl-horizontal">
+
+  <div style="width:425px" id="__ss_5423837"> <strong style="display:block;margin:12px 0 4px"><a href="http://www.slideshare.net/luizsanches/software-livreserpensaragir" title="Software Livre: ser, pensar e agir" target="_blank">Software Livre: ser, pensar e agir</a></strong> <iframe src="http://www.slideshare.net/slideshow/embed_code/5423837" width="425" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0" allowfullscreen></iframe> <div style="padding:5px 0 12px"> View more <a href="http://www.slideshare.net/" target="_blank">presentations</a> from <a href="http://www.slideshare.net/luizsanches" target="_blank">Luiz Sanches</a> </div> </div>
+
 </dl>
 
 <div class="form-actions">
