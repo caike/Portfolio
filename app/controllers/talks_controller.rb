@@ -43,7 +43,7 @@ class TalksController < ApplicationController
     @talk = Talk.new(params[:talk])
 
     respond_to do |format|
-      if @talk.save
+      if @talk.add_to_portfolio
         format.html { redirect_to @talk, notice: 'Talk was successfully created.' }
         format.json { render json: @talk, status: :created, location: @talk }
       else
