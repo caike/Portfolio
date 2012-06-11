@@ -6,7 +6,6 @@
   <thead>
     <tr>
       <th><%= model_class.human_attribute_name(:title) %></th>
-      <th><%= model_class.human_attribute_name(:url) %></th>
       <th><%= model_class.human_attribute_name(:created_at) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
@@ -15,8 +14,7 @@
     <% @talks.each do |talk| %>
       <tr>
         <td><%= link_to talk.title, talk %></td>
-        <td><%= talk.url %></td>
-        <td><%=l talk.created_at %></td>
+        <td><%= talk.created_at.strftime('%e %b %Y') %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_talk_path(talk), :class => 'btn btn-mini' %>

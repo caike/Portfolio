@@ -4,16 +4,7 @@
 </div>
 
 <dl class="dl-horizontal">
-  <dt><strong><%= model_class.human_attribute_name(:title) %>:</strong></dt>
-  <dd><%= @talk.title %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:url) %>:</strong></dt>
-  <dd><%= @talk.url %></dd>
-</dl>
-
-<dl class="dl-horizontal">
-
-	<%= raw @talk.embed_url_widget %>
-
+  <%= raw @talk.embed_url_widget %>
 </dl>
 
 <div class="form-actions">
