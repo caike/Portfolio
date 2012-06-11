@@ -41,6 +41,13 @@
     </div>
 
     <div class="container-fluid">
+
+      <% flash.each do |name, message| %>
+        <div class="alert alert-<%= name.to_s == 'error' ? 'error' : 'notice' %>">
+          <div><%= message %></div>
+        </div>
+      <% end %>
+
       <div class="row-fluid">
         <div class="span3">
           <div class="well sidebar-nav">

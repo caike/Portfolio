@@ -47,6 +47,7 @@ class TalksController < ApplicationController
         format.html { redirect_to @talk, notice: 'Talk was successfully created.' }
         format.json { render json: @talk, status: :created, location: @talk }
       else
+        flash[:error] = 'Erro ao adicionar a palestra'
         format.html { render action: "new" }
         format.json { render json: @talk.errors, status: :unprocessable_entity }
       end
