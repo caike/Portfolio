@@ -1,6 +1,21 @@
+<%= content_for(:javascripts) do%>
+  $(function(){
+
+    $('#talk_url').on('paste', function(e){
+      setTimeout(function(){
+        var url = $(e.currentTarget).val();
+        var title = NameResolver.titleFromUrl(url)
+        if(title){
+          $('#talk_title').val(title);
+        }
+      },100);
+    });
+  });
+<% end %>
+
 <%= simple_form_for @talk, :html => { :class => 'form-horizontal' } do |f| %>
-  <%= f.input :title %>
   <%= f.input :url %>
+  <%= f.input :title %>
   <div class="form-actions">
     <%= f.button :submit, :class => 'btn-primary' %>
     <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
