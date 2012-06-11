@@ -1,0 +1,26 @@
+pt-BR:
+  helpers:
+    actions: 'Ações'
+    links:
+      new: "Nova"
+      edit: "Editar"
+      destroy: "Excluir"
+      confirm: "Tem certeza?"
+      cancel: "Cancelar"
+    titles:
+      new: "Cadastrar %{model}"
+      edit: "Modificar %{model}"
+    submit:
+      create: "Criar"
+      update: "Atualizar"
+
+  Talks: "Palestras"
+  Talk: "Palestra"
+
+  activerecord:
+    attributes:
+      talk:
+        title: "Título"
+        url: "URL"
+        created_at: "Data de criação"
+
