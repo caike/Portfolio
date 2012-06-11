@@ -28,16 +28,16 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-					<%= link_to "Portfolio do Grupo TaSafo", root_path, class: "brand" %>
-          <!--
+					<%= link_to  root_path, class: "brand" do %>
+						Portfolio do Grupo <acronym title="Tecnologias Abertas com Software Ágil, Fácil e Organizado">TaSafo</acronym>
+					<% end %>
           <div class="container-fluid nav-collapse">
             <ul class="nav">
-              <li><%= link_to "Link1", "/path1"  %></li>
-              <li><%= link_to "Link2", "/path2"  %></li>
-              <li><%= link_to "Link3", "/path3"  %></li>
+							<li><%= link_to "Blog", "http://tasafo.wordpress.com/" %></li>
+							<li><%= link_to "Grupo", "http://br.groups.yahoo.com/group/safos" %></li>
+							<li><%= link_to "Site", "http://tasafo.org/2009/" %></li>
             </ul>
           </div>
-          -->
         </div>
       </div>
     </div>
@@ -67,7 +67,7 @@
       </div><!--/row-->
 
       <footer>
-        <p>&copy; TaSafo 2012</p>
+				<p>&copy; <acronym title="Tecnologias Abertas com Software Ágil, Fácil e Organizado">TaSafo</acronym> 2012</p>
       </footer>
 
     </div> <!-- /container -->
