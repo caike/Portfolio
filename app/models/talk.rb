@@ -3,6 +3,8 @@ require 'slideshare'
 class Talk < ActiveRecord::Base
   attr_accessible :title, :url
 
+  belongs_to :author
+
   protected :save
 
   def add_to_portfolio

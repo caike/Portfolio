@@ -7,14 +7,16 @@
   <%= raw @talk.embed_url_widget %>
 </dl>
 
-<div class="form-actions">
-  <%= link_to t('.back', :default => t("helpers.links.back")),
-              talks_path, :class => 'btn'  %>
-  <%= link_to t('.edit', :default => t("helpers.links.edit")),
-              edit_talk_path(@talk), :class => 'btn' %>
-  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
-              talk_path(@talk),
-              :method => 'delete',
-              :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')),
-              :class => 'btn btn-danger' %>
-</div>
+<% if current_author %>
+  <div class="form-actions">
+    <%= link_to t('.back', :default => t("helpers.links.back")),
+      talks_path, :class => 'btn'  %>
+    <%= link_to t('.edit', :default => t("helpers.links.edit")),
+      edit_talk_path(@talk), :class => 'btn' %>
+    <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+      talk_path(@talk),
+      :method => 'delete',
+      :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')),
+      :class => 'btn btn-danger' %>
+  </div>
+<% end %>

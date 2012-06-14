@@ -1,4 +1,7 @@
 class TalksController < ApplicationController
+
+  before_filter :require_login, except: [:index, :show]
+
   # GET /talks
   # GET /talks.json
   def index
@@ -40,7 +43,7 @@ class TalksController < ApplicationController
   # POST /talks
   # POST /talks.json
   def create
-    @talk = Talk.new(params[:talk])
+    @talk = current_author.talks.new(params[:talk])
 
     respond_to do |format|
       if @talk.add_to_portfolio

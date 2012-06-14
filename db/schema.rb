@@ -11,7 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120610223555) do
+ActiveRecord::Schema.define(:version => 20120614005610) do
+
+  create_table "authors", :force => true do |t|
+    t.string   "email"
+    t.string   "crypted_password"
+    t.string   "salt"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+  end
 
   create_table "talks", :force => true do |t|
     t.string   "title"
@@ -19,6 +27,7 @@ ActiveRecord::Schema.define(:version => 20120610223555) do
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
     t.text     "embed_url_widget"
+    t.integer  "author_id"
   end
 
 end

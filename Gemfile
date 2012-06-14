@@ -29,6 +29,11 @@ end
 group :development, :test do
   gem 'sqlite3'
   gem 'evergreen', require: 'evergreen/rails'
+  gem 'rspec-rails'
+end
+
+group :test do
+  gem 'factory_girl_rails'
 end
 
 # To use ActiveModel has_secure_password
@@ -47,3 +52,4 @@ end
 #
 gem 'simple_form'
 gem 'httparty'
+gem 'sorcery', git: 'https://github.com/NoamB/sorcery.git'
