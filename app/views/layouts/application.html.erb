@@ -52,12 +52,15 @@
 
       <div class="row-fluid">
         <div class="span3">
+
+          <%= yield(:more_from_author) %>
+
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
               <li class="nav-header">Recentes</li>
-                <% @recent_talks.each do |talk| %>
-                  <li><%= link_to talk.title, talk %></li>
-                <% end %>
+              <% @recent_talks.each do |talk| %>
+                <li><%= link_to talk.title, talk %></li>
+              <% end %>
             </ul>
           </div><!--/.well -->
         </div><!--/span-->

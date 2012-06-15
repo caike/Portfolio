@@ -17,6 +17,8 @@ class TalksController < ApplicationController
   # GET /talks/1.json
   def show
     @talk = Talk.find(params[:id])
+    @author = @talk.author
+    @more_from_author = @author.talks.where('id <> ?', @talk.id)
 
     respond_to do |format|
       format.html # show.html.erb

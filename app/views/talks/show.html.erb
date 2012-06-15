@@ -20,3 +20,17 @@
       :class => 'btn btn-danger' %>
   </div>
 <% end %>
+
+<% content_for(:more_from_author) do %>
+  <% if @more_from_author.any? %>
+    <div class="well sidebar-nav">
+      <ul class="nav nav-list">
+        <li class="nav-header">Outras do Autor</li>
+        <% @more_from_author.each do |talk| %>
+          <li><%= link_to talk.title, talk %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+<% end %>
+
