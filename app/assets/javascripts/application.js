@@ -14,4 +14,5 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require name_resolver
+//= require handlebars
 //= require_tree .

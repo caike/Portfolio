@@ -22,15 +22,30 @@
 <% end %>
 
 <% content_for(:more_from_author) do %>
-  <% if @more_from_author.any? %>
-    <div class="well sidebar-nav">
-      <ul class="nav nav-list">
-        <li class="nav-header">Outras do Autor</li>
-        <% @more_from_author.each do |talk| %>
-          <li><%= link_to talk.title, talk %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
+
+  <script type="text/json" id="more_from_author">
+    { "talks": <%= raw @more_from_author.to_json({only: [:id, :title]}) %> }
+  </script>
+
+  <!-- here goes a view -->
+  <script type="text/x-handlebars-template" id="other_slides">
+    <ul class="nav nav-list">
+      <li class="nav-header">Outras do Autor</li>
+      {{#each talks}}
+        <li><a href="/talks/{{this.id}}">{{this.title}}</a></li>
+      {{/each}}
+    </ul>
+  </script>
+
+  <div class="well sidebar-nav" id="render_more_from_author">
+  </div>
+
+<% end %>
+
+<% content_for(:javascripts) do %>
+  $(function(){
+    otherSlidesView = new window.Portfolio.Views.OtherSlidesView();
+    otherSlidesView.render();
+  });
 <% end %>
 

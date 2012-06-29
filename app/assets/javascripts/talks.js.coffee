@@ -1,3 +1,19 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
+class OtherSlidesView
+  constructor: ->
+    @template = Handlebars.compile($('#other_slides').html())
+    @element = $('#render_more_from_author')
+
+  render: ->
+    context = @load_data()
+    @element.html(@template(context))
+
+  load_data: ->
+    data = $('#more_from_author').html()
+    JSON.parse(data)
+
+
+window.Portfolio = {}
+
+window.Portfolio.Views = {}
+
+window.Portfolio.Views.OtherSlidesView = OtherSlidesView
