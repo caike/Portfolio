@@ -7,6 +7,18 @@
   <%= raw @talk.embed_url_widget %>
 </dl>
 
+<h3>Gostou ? Dê a sua nota!</h3>
+
+<dl class="dl-horizontal">
+  <div class="well span2 rate-box">
+    <span class="rating">
+      <span class="star"></span>
+      <span class="star"></span>
+      <span class="star"></span>
+    </span>
+  </div>
+</dl>
+
 <% if current_author %>
   <div class="form-actions">
     <%= link_to t('.back', :default => t("helpers.links.back")),
